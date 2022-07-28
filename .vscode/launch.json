@@ -7,7 +7,8 @@
         {
             "name": "owl_app",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "program": "lib/view/main.dart",
         },
         {
             "name": "owl_app (profile mode)",
