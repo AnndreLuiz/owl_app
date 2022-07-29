@@ -13,7 +13,6 @@ class _NewAssignmentState extends State<NewAssignment> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(139, 2, 211, 1),
       body: Stack(
         children: [
           Column(
@@ -90,9 +89,14 @@ class _NewAssignmentState extends State<NewAssignment> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(
-                    'lib/images/iconexcluir.png',
-                    height: 70,
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).popAndPushNamed('/list');
+                    },
+                    child: Image.asset(
+                      'lib/images/iconexcluir.png',
+                      height: 70,
+                    ),
                   ),
                   SizedBox(
                     width: 130,

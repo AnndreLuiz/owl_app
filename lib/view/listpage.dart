@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:owl_app/view/newassignment.dart';
 
 class ListPage extends StatefulWidget {
   const ListPage({Key? key}) : super(key: key);
@@ -14,7 +13,6 @@ class _ListPageState extends State<ListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(139, 2, 211, 1),
       body: Stack(
         children: [
           Column(
@@ -81,10 +79,15 @@ class _ListPageState extends State<ListPage> {
                 height: 10,
               ),
               Center(
-                child: Image.asset(
-                  'lib/images/iconadd.png',
-                  height: 80,
-                  width: 80,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/new');
+                  },
+                  child: Image.asset(
+                    'lib/images/iconadd.png',
+                    height: 80,
+                    width: 80,
+                  ),
                 ),
               ),
             ],

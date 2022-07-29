@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'homepage.dart';
 import 'listpage.dart';
 import 'newassignment.dart';
+import 'register.dart';
+import 'registerconcluded.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,12 +15,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Lovepeople',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Color.fromRGBO(169, 1, 247, 1),
       ),
       debugShowCheckedModeBanner: false,
-      home: NewAssignment(),
+      routes: {
+        '/': (context) => const HomePage(),
+        '/regis': (context) => const Register(),
+        '/list': (context) => const ListPage(),
+        '/new': (context) => const NewAssignment(),
+        '/concluded': (context) => const RegisterConcluded(),
+      },
+      initialRoute: '/',
     );
   }
 }
